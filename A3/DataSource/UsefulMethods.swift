@@ -9,6 +9,9 @@
 import UIKit
 import Foundation
 
+let UserDefaultsNameUser = "UserDefaultsNameUser"
+let UserDefaultsNamePassword = "UserDefaultsNamePassword"
+
 let ticketsPath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("tickets.plist")
 
 

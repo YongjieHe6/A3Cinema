@@ -15,7 +15,7 @@ class Ticket:NSObject,NSCoding,Codable{
     var movieShowTime:String
     var moviePrice:String
     var orderSeatNumbers:String?
-    var orderTotlePrice:String?
+    var orderTotalPrice:String?
     
     override init() {
         movieID = ""
@@ -23,7 +23,7 @@ class Ticket:NSObject,NSCoding,Codable{
         movieShowTime = ""
         moviePrice = ""
         orderSeatNumbers = ""
-        orderTotlePrice = ""
+        orderTotalPrice = ""
     }
     
     required init?(coder: NSCoder) {
@@ -32,7 +32,7 @@ class Ticket:NSObject,NSCoding,Codable{
         movieShowTime = coder.decodeObject(forKey: "movieShowTime") as! String
         moviePrice = coder.decodeObject(forKey: "moviePrice") as! String
         orderSeatNumbers = coder.decodeObject(forKey: "orderSeatNumbers") as? String
-        orderTotlePrice = coder.decodeObject(forKey: "orderTotlePrice") as? String
+        orderTotalPrice = coder.decodeObject(forKey: "orderTotalPrice") as? String
     }
     
     func encode(with coder: NSCoder) {
@@ -41,7 +41,7 @@ class Ticket:NSObject,NSCoding,Codable{
         coder.encode(movieShowTime, forKey: "movieShowTime")
         coder.encode(moviePrice, forKey: "moviePrice")
         coder.encode(orderSeatNumbers, forKey: "orderSeatNumbers")
-        coder.encode(orderTotlePrice, forKey: "orderTotlePrice")
+        coder.encode(orderTotalPrice, forKey: "orderTotalPrice")
     }
     
     
